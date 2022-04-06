@@ -1,0 +1,70 @@
+              Tuples
+
+     In Python tuples are very similar to lists, however, unlike lists they are immutable meaning they can not be changed. You would use tuples to present things that shouldn't be changed, such as days of the week, or dates on a calendar.
+
+In this section, we will get a brief overview of the following:
+
+1.) Constructing Tuples
+2.) Basic Tuple Methods
+3.) Immutability
+4.) When to Use Tuples
+
+
+Constructing Tuples
+The construction of a tuples use () with elements separated by commas. For example:
+
+# Create a tuple
+t = (1,2,3)
+
+# Check len just like a list
+len(t)
+3
+
+# Can also mix object types
+t = ('one',2)
+
+# Show
+
+t('one', 2)
+
+# Use indexing just like we did in lists
+t[0]
+output:-'one'
+
+#slicing just like a list
+t[-1]
+output:- 2
+
+Basic tuple methods
+
+tuples have built in methods,but not as many lists do.
+
+# Use .index to enter a value and return the index
+t.index('one')
+output:- 0
+
+# Use .count to count the number of times a value appears
+t.count('one')
+output:- 1
+
+
+Immutability
+It can't be stressed enough that tuples are immutable. 
+
+t[0]= 'change'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-8-1257c0aa9edd> in <module>()
+----> 1 t[0]= 'change'
+
+TypeError: 'tuple' object does not support item assignment
+
+Because of this immutability, tuples can't grow. Once a tuple is made we can not add to it.
+
+t.append('nope')
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-9-b75f5b09ac19> in <module>()
+----> 1 t.append('nope')
+
+AttributeError: 'tuple' object has no attribute 'append'
